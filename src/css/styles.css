@@ -12,3 +12,55 @@
 /* Sections style */
 @import url('./header.css');
 @import url('./back-link.css');
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Початково 3 колонки */
+  gap: 24px; /* Відступи між зображеннями */
+  max-width: 860px; /* Максимальна ширина галереї */
+  margin: 0 auto; /* Центрування галереї */
+  padding: 24px; /* Відступи всередині галереї */
+  box-sizing: border-box; /* Враховує паддінг у ширині */
+}
+
+.gallery-item {
+  list-style: none;
+}
+
+.gallery-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.gallery-image {
+  width: 100%; /* Зображення займає всю ширину колонки */
+  height: 200px; /* Фіксована висота */
+  object-fit: cover; /* Обрізання зображення під розмір колонки */
+  transition: transform 0.3s ease; /* Анімація при наведенні */
+}
+
+.gallery-image:hover,
+.gallery-image:focus {
+  transform: scale(1.05); /* Збільшення при наведенні */
+}
+
+/* Адаптивність */
+
+/* На екранах до 768px - 2 колонки */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Дві колонки */
+    max-width: 600px; /* Максимальна ширина галереї */
+  }
+}
+
+/* На екранах до 480px - 1 колонка */
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Одна колонка */
+    max-width: 360px; /* Максимальна ширина галереї */
+  }
+}
