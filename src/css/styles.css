@@ -64,3 +64,85 @@
     max-width: 360px; /* Максимальна ширина галереї */
   }
 }
+
+/* Загальні стилі для форми */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Загальний стиль для всіх label */
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Відступ між назвою поля і самим інпутом */
+  align-items: flex-start;
+  font: 400 14px / 1.5 'Montserrat', sans-serif;
+  color: #000;
+}
+
+/* Інпут "Email" */
+.feedback-form input[type='email'] {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px; /* Ширина інпута */
+  height: 40px; /* Висота інпута */
+  padding: 8px; /* Відступ усередині */
+  font: 400 14px / 1.5 'Montserrat', sans-serif;
+  color: #000;
+  box-sizing: border-box; /* Включає padding у загальні розміри */
+}
+
+.feedback-form input[type='email']:hover,
+.feedback-form input[type='email']:focus {
+  border-color: #000;
+  outline: none;
+}
+
+/* Інпут "Message" */
+.feedback-form textarea {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px; /* Ширина текстового поля */
+  height: 80px; /* Висота текстового поля */
+  padding: 8px; /* Відступ усередині */
+  font: 400 14px / 1.5 'Montserrat', sans-serif;
+  color: #000;
+  box-sizing: border-box; /* Включає padding у загальні розміри */
+}
+
+.feedback-form textarea:hover,
+.feedback-form textarea:focus {
+  border-color: #000;
+  outline: none;
+}
+
+/* Кнопка "Submit" */
+.feedback-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+
+  background-color: #4e75ff;
+  font: 500 16px / 1.5 'Montserrat', sans-serif;
+  color: #fff;
+  letter-spacing: 0.04em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover,
+.feedback-form button:focus {
+  background-color: #6c8cff;
+  outline: none;
+}

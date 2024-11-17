@@ -1,8 +1,6 @@
-// Імпорт бібліотеки SimpleLightbox та її стилів
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-// Масив даних для зображень
 const images = [
   {
     preview:
@@ -18,8 +16,7 @@ const images = [
       'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg',
     description: 'Container Haulage Freight',
   },
-  // Інші об'єкти...
-  {
+    {
     preview:
       'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg',
     original:
@@ -70,10 +67,8 @@ const images = [
   },
 ];
 
-// Отримуємо контейнер галереї
 const galleryContainer = document.querySelector('.gallery');
 
-// Створюємо розмітку для галереї
 const galleryMarkup = images
   .map(
     ({ preview, original, description }) => `
@@ -90,11 +85,9 @@ const galleryMarkup = images
   )
   .join('');
 
-// Додаємо розмітку в DOM
 galleryContainer.innerHTML = galleryMarkup;
 
-// Ініціалізація SimpleLightbox
 const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt', // Використовуємо атрибут alt як підпис
-  captionDelay: 250, // Затримка перед показом підпису (мс)
+  captionsData: 'alt', 
+  captionDelay: 250, 
 });
